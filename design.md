@@ -6,7 +6,7 @@
 ## 🌱 Problem Statement  
 ### Empowering Teachers in Multi-Grade Classrooms  
 
-In many under-resourced schools across India—especially rural and government schools—a **single teacher** often manages **multiple grades** simultaneously.  
+In many under-resourced schools across India—especially rural and government schools—a **single teacher** often manages **multiple grades** simultaneously.
 
 ### 🚧 Core Challenges  
 - Overwhelming **manual workload** (attendance, supervision, homework, announcements)  
@@ -224,7 +224,53 @@ Parents can:
 
 ---
 
-## ✨ 15. Additional Smart Features  
+## 🎯 15. AI-Powered Random Student Engagement (Every 20 Minutes)
+
+To ensure **active participation** and prevent passive learning:
+
+- Every **20 minutes**, AI randomly selects a student  
+- Selection is based on the **attendance sheet** (present students only)  
+- AI agent asks a **question related to the current lecture topic**  
+- Question difficulty adapts to:  
+  - Class level  
+  - Topic being taught  
+  - Lecture time-stamp  
+
+If the student:
+- Answers correctly → class continues  
+- Answers incorrectly or stays silent → AI provides hints or explanation  
+- Repeated failure → teacher notified  
+
+✅ Keeps students alert  
+✅ Prevents sleeping  
+✅ Encourages equal participation  
+✅ Improves confidence and speaking skills  
+
+---
+
+## 🧑‍🏫 16. Centralized Live Teaching via Smart Whiteboard  
+
+Class.ai allows the teacher to **teach one or multiple classes together** from the **office room only**, using a smart digital whiteboard.
+
+### Features:
+- Teacher uses a **smart whiteboard / tablet / touchscreen**  
+- Live writing, drawing, and explanations  
+- Whiteboard stream broadcast to:  
+  - One class  
+  - Multiple classes  
+  - Entire school (optional)  
+
+### Benefits:
+- One teacher handles **multiple grades simultaneously**  
+- Ideal for:  
+  - Common subjects  
+  - Revision sessions  
+  - Moral science classes  
+- Reduces physical movement and fatigue  
+
+---
+
+## ✨ 17. Additional Smart Features  
 
 ### 🔹 AI Behavior Monitoring  
 - Detects sleeping, fighting, phone usage  
@@ -258,8 +304,9 @@ Examples:
 - 🛡️ Discipline and safety are always maintained  
 
 ### 🌍 Impact  
+
 Class.ai is **scalable, affordable, and transformative**, especially for **rural and government schools**, turning constraints into capabilities through AI.
 
 ---
 
-**Class.ai — Turning One Teacher into a Smart School.** 🚀
+🚀 **Class.ai — Turning One Teacher into a Fully Interactive Smart School.**
