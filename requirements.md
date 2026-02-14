@@ -1,312 +1,227 @@
-# 🎓 Class.ai  
-### An AI-Powered Smart School System for Low-Resource Environments  
+# 📋 Class.ai — Requirements
+
+## 🎓 Project Overview
+
+Class.ai is an AI-powered smart school system designed for low-resource environments where a single teacher manages multiple classrooms.  
+This document defines the **functional, non-functional, hardware, and software requirements** needed to implement the system.
 
 ---
 
-## 🌱 Problem Statement  
-### Empowering Teachers in Multi-Grade Classrooms  
+## ⚙️ 1. Functional Requirements
 
-In many under-resourced schools across India—especially rural and government schools—a **single teacher** often manages **multiple grades** simultaneously.
-
-### 🚧 Core Challenges  
-- Overwhelming **manual workload** (attendance, supervision, homework, announcements)  
-- **Limited monitoring**, leading to discipline and safety issues  
-- **One-size-fits-all teaching**, unable to address diverse learning levels  
-- **Parents disconnected** from daily school activities  
-- Poor infrastructure and unreliable internet  
+### 1.1 Smart Attendance System
+- AI-based face recognition at school gate
+- Attendance auto-marking between defined time slots
+- Attendance lock after closing time
+- Late and absent tracking
 
 ---
 
-## 🎯 Objective  
-
-Build **Class.ai**, an **AI-powered teaching assistant** that acts as a **true companion** for teachers in multi-grade, low-resource environments by:
-
-- Reducing manual effort through automation  
-- Enabling one teacher to manage the entire school efficiently  
-- Improving learning quality and discipline  
-- Keeping parents continuously informed  
+### 1.2 Classroom Automation
+- One-click activation of all classrooms
+- Automatic national anthem playback
+- Centralized classroom device control
 
 ---
 
-## 🚀 The Solution: Class.ai  
-
-**Class.ai** is an **end-to-end AI-based school automation system** designed for schools where **one teacher manages everything**.  
-It transforms a traditional school into a **fully automated smart institution** using AI, cameras, and simple digital infrastructure.
-
----
-
-## 🧠 System Overview  
-
-- **Supernode (Teacher/Admin):**  
-  Central control dashboard for the entire school  
-
-- **Classroom Nodes:**  
-  Each classroom has:  
-  - Monitor / Projector  
-  - Camera  
-  - Speaker  
-  - Basic Internet  
-
-- **Students:**  
-  Zero control — fully supervised and guided  
+### 1.3 Live Monitoring
+- Continuous camera streaming
+- Real-time classroom switching
+- Screenshot and recording capability
 
 ---
 
-## 🕘 1. Smart Attendance at School Gate (10:00 AM – 11:00 AM)  
-
-- AI-powered **face recognition cameras** at the school gate  
-- Attendance automatically marked between **10:00–11:00 AM**  
-- Face matched with student database  
-- Attendance **locked exactly at 11:00 AM**  
-- Late and absent students logged automatically  
-
-✅ No manual registers  
-✅ No proxy attendance  
+### 1.4 AI Lecture Streaming
+- Upload and assign recorded lectures
+- Auto-stream videos to classrooms
+- Multi-class simultaneous delivery
 
 ---
 
-## 🚪 2. Classroom Entry  
-
-After attendance:
-- Students move to their respective classrooms  
-- No teacher supervision required  
-
----
-
-## ⚡ 3. One-Click Classroom Activation  
-
-- Teacher activates **all classroom screens** from a central dashboard  
-- No need to physically visit classrooms  
+### 1.5 Smart Content Selection
+- Accept YouTube links or topic input
+- AI searches and selects educational content
+- Automatic classroom streaming
 
 ---
 
-## 🇮🇳 4. National Anthem Automation (11:00 AM Sharp)  
-
-- Plays automatically at **11:00 AM**  
-- Broadcast simultaneously on:  
-  - Classroom monitors  
-  - Projectors  
-  - Speakers  
-
-✅ Saves time  
-✅ Ensures uniformity  
-✅ No ground assembly needed  
+### 1.6 In-Class Attendance Validation
+- AI head detection for student counting
+- Compare gate attendance vs classroom presence
+- Automatic alerts when students leave class
 
 ---
 
-## 🎥 5. Continuous Classroom Monitoring  
-
-- Cameras remain **always ON**  
-- Live video feeds streamed to teacher dashboard  
-- Teacher can:  
-  - View any class anytime  
-  - Zoom / switch classrooms  
-  - Take screenshots or recordings  
+### 1.7 Remote Classroom Control
+Teacher must be able to:
+- Pause / resume / stop lectures
+- Control audio and display
+- Lock/unlock screens
+- Send live instructions
 
 ---
 
-## 📺 6. AI-Based Class Streaming  
-
-- Teacher records lessons in advance  
-- Videos uploaded and assigned to specific classes  
-- Each classroom streams its own lecture  
-
-### Benefits  
-- One teacher teaches **multiple classes simultaneously**  
-- Consistent teaching quality  
+### 1.8 AI Doubt Detection
+- Detect raised hand or voice keyword (“Doubt”)
+- Pause lecture automatically
+- Provide AI tutor or teacher intervention
+- Resume after confirmation
 
 ---
 
-## 🔍 7. Smart Content Selection  
-
-Teacher can:  
-- Paste a **YouTube link**, OR  
-- Enter a **topic name**  
-
-AI will:  
-- Search trusted educational platforms  
-- Select the best video  
-- Auto-stream to selected classroom  
+### 1.9 Announcement System
+- Text, audio, and emergency broadcasts
+- Instant display across classrooms
 
 ---
 
-## 👥 8. Smart Attendance During Class  
-
-- AI continuously counts students using **head detection**  
-- Compares:  
-  - Gate attendance (11:00 AM)  
-  - Classroom presence  
-
-If a student leaves:  
-- Face tracking identifies the student  
-- Parent notified instantly via **SMS / WhatsApp**  
-
-✅ Prevents bunking  
-✅ Ensures safety  
+### 1.10 Emergency Management
+- Manual emergency alert trigger
+- Future AI-based abnormal behavior detection
+- Parent and authority notifications
 
 ---
 
-## 🎛️ 9. Full Classroom Control  
-
-Teacher can remotely:  
-- Pause / resume / stop any class  
-- Control volume and display  
-- Lock or unlock screens  
-- Send live alerts or instructions  
+### 1.11 Automated Homework Generation
+- AI-generated homework after lectures
+- Summary PPT creation
+- Auto sharing with parents/students
 
 ---
 
-## ✋ 10. Doubt Detection & AI Assistance  
-
-During class streaming:  
-- Student raises hand or says **“Doubt”**  
-- Video pauses instantly  
-
-AI then:  
-- Identifies student via face & voice  
-- Activates AI tutor or teacher intervention  
-
-When student says **“Okay” / “Understand”**:  
-- Video resumes automatically  
+### 1.12 Parent Dashboard
+Parents should be able to:
+- View attendance
+- Access homework and recordings
+- Receive absence alerts
+- Track student progress
 
 ---
 
-## 📢 11. Real-Time Announcements  
-
-Teacher can broadcast:  
-- Text messages  
-- Audio announcements  
-- Emergency alerts  
-
-Displayed instantly on **all classroom screens**  
+### 1.13 AI Student Engagement
+- Random student selection every 20 minutes
+- Topic-based AI questions
+- Adaptive difficulty
+- Teacher notification if required
 
 ---
 
-## 🚨 12. Emergency Detection & Alerts  
-
-### Manual  
-- Fire  
-- Medical emergency  
-- Unauthorized entry  
-
-### Future AI-Based Detection  
-- Violence  
-- Panic  
-- Abnormal behavior  
-
-Alerts:  
-- Displayed on screens  
-- Sent to parents & authorities if needed  
+### 1.14 Centralized Live Teaching
+- Smart whiteboard streaming
+- Broadcast to single or multiple classrooms
+- Real-time teaching support
 
 ---
 
-## 📚 13. Automated Homework & Learning Material  
+## 🖥️ 2. Hardware Requirements
 
-After each class, AI:  
-- Generates homework  
-- Creates summary PPT  
-
-Sent to:  
-- Parent dashboard  
-- WhatsApp  
-- Student app  
+### 2.1 Supernode (Teacher/Admin)
+- Desktop / Laptop
+- Internet connection
+- Dashboard access system
 
 ---
 
-## 👨‍👩‍👧 14. Parent Dashboard  
-
-Parents can:  
-- View attendance  
-- Access homework & recordings  
-- Receive absence alerts  
-- Track academic progress  
-- Communicate digitally with teacher  
+### 2.2 School Gate Setup
+- AI-enabled camera
+- Stable power supply
+- Internet connectivity
 
 ---
 
-## 🎯 15. AI-Powered Random Student Engagement (Every 20 Minutes)
-
-To ensure **active participation** and prevent passive learning:
-
-- Every **20 minutes**, AI randomly selects a student  
-- Selection is based on the **attendance sheet** (present students only)  
-- AI agent asks a **question related to the current lecture topic**  
-- Question difficulty adapts to:  
-  - Class level  
-  - Topic being taught  
-  - Lecture time-stamp  
-
-If the student:
-- Answers correctly → class continues  
-- Answers incorrectly or stays silent → AI provides hints or explanation  
-- Repeated failure → teacher notified  
-
-✅ Keeps students alert  
-✅ Prevents sleeping  
-✅ Encourages equal participation  
-✅ Improves confidence and speaking skills  
+### 2.3 Classroom Node (Per Classroom)
+- Monitor / Projector
+- Camera
+- Speaker
+- Basic internet access
+- Power backup (recommended)
 
 ---
 
-## 🧑‍🏫 16. Centralized Live Teaching via Smart Whiteboard  
+## 💻 3. Software Requirements
 
-Class.ai allows the teacher to **teach one or multiple classes together** from the **office room only**, using a smart digital whiteboard.
+### Core Technologies
+- AI Face Recognition System
+- Computer Vision Module
+- Video Streaming Engine
+- Voice Recognition
+- AI/NLP Assistant
+- Notification APIs (SMS / WhatsApp)
 
-### Features:
-- Teacher uses a **smart whiteboard / tablet / touchscreen**  
-- Live writing, drawing, and explanations  
-- Whiteboard stream broadcast to:  
-  - One class  
-  - Multiple classes  
-  - Entire school (optional)  
-
-### Benefits:
-- One teacher handles **multiple grades simultaneously**  
-- Ideal for:  
-  - Common subjects  
-  - Revision sessions  
-  - Moral science classes  
-- Reduces physical movement and fatigue  
+### Platforms
+- Web-based dashboard
+- Cloud / Edge database
+- Local caching system (offline mode)
 
 ---
 
-## ✨ 17. Additional Smart Features  
+## 🌐 4. Network Requirements
 
-### 🔹 AI Behavior Monitoring  
-- Detects sleeping, fighting, phone usage  
-- Generates behavior reports  
-
-### 🔹 Language Translation  
-- Auto-translates content into local languages  
-
-### 🔹 Offline Mode  
-- Videos cached locally for poor internet  
-
-### 🔹 Performance Analytics  
-- Engagement tracking  
-- Weak topic detection  
-- Attendance trends  
-
-### 🔹 Voice-Based Teacher Commands  
-Examples:  
-- “Pause Class 3”  
-- “Open Class 5 Camera”  
+- Basic internet connectivity
+- Local caching for low-network environments
+- Secure communication between nodes
+- Scalable bandwidth for video streaming
 
 ---
 
-## 🏁 Conclusion  
+## 🔒 5. Non-Functional Requirements
 
-**Class.ai** redefines education in low-resource environments by ensuring that:
+### Performance
+- Real-time video streaming
+- Fast attendance processing
+- Low-latency classroom control
 
-- 👩‍🏫 One teacher can manage the entire school  
-- 🎓 Students receive consistent, high-quality learning  
-- 👨‍👩‍👧 Parents remain actively connected  
-- 🛡️ Discipline and safety are always maintained  
+### Reliability
+- Offline video caching
+- Stable operation in low-resource environments
 
-### 🌍 Impact  
+### Scalability
+- Support multiple classrooms
+- Expandable to larger schools
 
-Class.ai is **scalable, affordable, and transformative**, especially for **rural and government schools**, turning constraints into capabilities through AI.
+### Security
+- Secure student data storage
+- Controlled dashboard access
+- Safe parent communication system
 
 ---
 
-🚀 **Class.ai — Turning One Teacher into a Fully Interactive Smart School.**
+## 📊 6. User Requirements
+
+### Teacher/Admin
+- Easy-to-use central dashboard
+- Minimal technical knowledge required
+- Full control over classrooms
+
+### Students
+- Simple passive interaction
+- AI-assisted learning environment
+
+### Parents
+- Mobile-friendly access
+- Instant notifications and updates
+
+---
+
+## 🚀 7. Future Requirements (Enhancements)
+
+- AI behavior analysis
+- Violence & panic detection
+- Multi-language real-time translation
+- Advanced performance analytics
+- Voice-based teacher controls
+
+---
+
+## 🏁 Conclusion
+
+The above requirements define the technical and functional foundation of **Class.ai**, ensuring that the system remains:
+
+- Affordable
+- Scalable
+- Reliable
+- Suitable for rural and government schools
+
+---
+
+🚀 **Class.ai — Building Smart Schools with Minimal Resources.**
