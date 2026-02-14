@@ -1,264 +1,266 @@
-# 🎓 Class.ai — Design
-### AI-Powered Smart School System for Low-Resource Environments
+# 🎨 Class.ai — System Design
+
+## 📌 Overview
+
+Class.ai is an AI-powered smart school system designed for low-resource environments where one teacher manages multiple classrooms.  
+This document describes the **system design, architecture, modules, and data flow** used to build the platform.
 
 ---
 
-## 🌱 1. Problem Statement
+## 🎬 Demo Video
 
-In many rural and government schools, a **single teacher manages multiple grades** simultaneously. This creates serious operational and learning challenges.
+### ▶️ Class.ai Project Demo
 
-### 🚧 Core Challenges
-- Heavy manual workload (attendance, supervision, announcements)
-- Limited classroom monitoring
-- One-size-fits-all teaching approach
-- Parents disconnected from daily activities
-- Poor infrastructure and unreliable internet
+[![Watch the Demo](https://img.youtube.com/vi/MMTAWdK9gE4/maxresdefault.jpg)](https://youtu.be/MMTAWdK9gE4)
+
+🔗 [Click here to watch on YouTube](https://youtu.be/MMTAWdK9gE4)
 
 ---
 
-## 🎯 2. Objective
 
-The goal of **Class.ai** is to build an AI-powered teaching assistant that:
+## 🧠 1. Design Goals
 
-- Reduces manual effort using automation
-- Enables one teacher to manage an entire school
-- Improves learning quality and discipline
-- Keeps parents continuously informed
-- Works efficiently in low-resource environments
+The system design focuses on:
+
+- Simplicity for teachers
+- Automation of repetitive tasks
+- Centralized control
+- Scalability for multiple classrooms
+- Reliability in low-internet environments
+- Affordable infrastructure
 
 ---
 
-## 🚀 3. Solution Overview
+## 🏗️ 2. High-Level Architecture
 
-Class.ai is an **end-to-end AI-based school automation system** designed specifically for schools where one teacher handles multiple responsibilities.
+                ┌──────────────────────┐
+                │   School Gate Camera │
+                │  (Face Recognition)  │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │   Attendance System   │
+                └──────────┬───────────┘
+                           │
+                           ▼
+               ┌────────────────────────┐
+               │   Supernode Dashboard   │
+               │   (Teacher / Admin)     │
+               └──────────┬─────────────┘
+                          │
+      ┌───────────────────┼───────────────────┐
+      ▼                   ▼                   ▼
+┌────────────────┐ ┌────────────────┐ ┌────────────────┐
+│ Classroom Node │ │ Classroom Node │ │ Classroom Node │
+│ (Class 1) │ │ (Class 2) │ │ (Class N) │
+└────────────────┘ └────────────────┘ └────────────────┘
+│
+▼
+┌────────────────────────┐
+│ Parent Notification Sys │
+└────────────────────────┘
 
-### 🧠 System Architecture
 
-#### 🔹 Supernode (Teacher/Admin)
-- Central control dashboard
-- Live monitoring & classroom control
-- Content management
-- Alerts & announcements
 
-#### 🔹 Classroom Nodes
-Each classroom includes:
-- Monitor / Projector
+---
+
+## 🧩 3. Core Components
+
+### 3.1 Supernode (Central Control)
+
+Acts as the brain of the system.
+
+Responsibilities:
+- Classroom activation
+- Live monitoring
+- Lecture management
+- Announcement broadcasting
+- Emergency alerts
+- Analytics monitoring
+
+---
+
+### 3.2 Smart Attendance Module
+
+Design Features:
+- AI face recognition at gate
+- Automated attendance marking
+- Attendance locking after defined time
+- Late and absent tracking
+
+Data Stored:
+- Student ID
+- Timestamp
+- Attendance status
+
+---
+
+### 3.3 Classroom Node Design
+
+Each classroom contains:
+
+- Display screen / projector
 - Camera
 - Speaker
-- Basic internet connection
+- Internet connection
 
-#### 🔹 Students
-- Fully guided AI-assisted learning
-- Minimal manual interaction required
-
----
-
-## ⚙️ 4. Methodology & Workflow
-
-### Step 1 — Smart Attendance at School Gate (10:00–11:00 AM)
-- AI face recognition marks attendance automatically
-- Attendance locks at 11:00 AM
-- Late/absent students logged automatically
+Functions:
+- Stream lectures
+- Capture live video
+- Receive commands from Supernode
+- Display announcements
 
 ---
 
-### Step 2 — Classroom Entry
-- Students move to classrooms independently
-- No teacher supervision required
+### 3.4 AI Streaming Module
+
+Workflow:
+1. Teacher uploads lecture or selects topic
+2. AI chooses appropriate content
+3. Content streamed to assigned classroom(s)
+
+Design Benefits:
+- Uniform teaching quality
+- One teacher → multiple classes
 
 ---
 
-### Step 3 — One-Click Classroom Activation
-- Teacher activates all classrooms from dashboard
-- No physical movement required
+### 3.5 Monitoring & Analytics Module
+
+- Continuous camera feed processing
+- Student counting via head detection
+- Behavior tracking (future scope)
+- Engagement analytics
 
 ---
 
-### Step 4 — National Anthem Automation (11:00 AM)
-- Automatic playback across all screens and speakers
-- Ensures uniformity without assembly
+### 3.6 AI Interaction Module
+
+Includes:
+- Doubt detection (voice/gesture)
+- Automatic video pause
+- AI tutor support
+- Resume control via voice command
 
 ---
 
-### Step 5 — Continuous Classroom Monitoring
-- Cameras remain ON
-- Live feeds available on teacher dashboard
-- Easy switching between classrooms
+### 3.7 Parent Communication Module
+
+Responsible for:
+- Attendance alerts
+- Homework delivery
+- Progress updates
+- Emergency notifications
+
+Channels:
+- SMS
+- WhatsApp
+- Parent dashboard
 
 ---
 
-### Step 6 — AI-Based Class Streaming
-- Teacher uploads pre-recorded lectures
-- Videos assigned per classroom
-- Multiple classes run simultaneously
+## 🔄 4. System Workflow Design
+
+### Daily Flow
+
+1. Student enters school → AI attendance captured
+2. Attendance stored in database
+3. Teacher activates classrooms
+4. Lecture streaming begins
+5. AI monitors classroom activity
+6. Engagement checks every 20 minutes
+7. Homework auto-generated after class
+8. Updates sent to parents
 
 ---
 
-### Step 7 — Smart Content Selection
-Teacher can:
-- Paste a YouTube link OR
-- Enter a topic name
+## 🗂️ 5. Data Flow Design
 
-AI:
-- Finds trusted educational content
-- Selects best video
-- Streams automatically
-
----
-
-### Step 8 — Smart Attendance During Class
-- AI head detection counts students
-- Compares gate attendance vs classroom presence
-- Parent notified if student leaves class
-
----
-
-### Step 9 — Full Remote Classroom Control
-Teacher can:
-- Pause / resume / stop lectures
-- Control volume & displays
-- Lock/unlock screens
-- Send instant alerts
-
----
-
-### Step 10 — Doubt Detection & AI Assistance
-- Student raises hand or says “Doubt”
-- Video pauses automatically
-- AI tutor or teacher intervention activated
-- Resume after confirmation
-
----
-
-### Step 11 — Real-Time Announcements
-- Text/audio messages broadcast instantly
-- Emergency alerts supported
-
----
-
-### Step 12 — Emergency Detection
-Manual:
-- Fire
-- Medical emergency
-- Unauthorized entry
-
-Future AI:
-- Violence detection
-- Abnormal behavior detection
-
----
-
-### Step 13 — Automated Homework & Learning Material
-After class:
-- AI generates homework
-- Summary PPT created
-- Shared with parents & students
-
----
-
-### Step 14 — Parent Dashboard
-Parents can:
-- View attendance records
-- Access homework & recordings
-- Receive alerts
-- Track student progress
-- Communicate digitally
-
----
-
-### Step 15 — AI Random Student Engagement
-Every 20 minutes:
-- AI selects a random present student
-- Topic-based question asked
-- Adaptive difficulty
-- Teacher notified if needed
-
----
-
-### Step 16 — Centralized Live Teaching
-Teacher uses:
-- Smart whiteboard / tablet / touchscreen
-
-Broadcast to:
-- One class
-- Multiple classes
-- Entire school
-
----
-
-### Step 17 — Additional Smart Features
-- AI behavior monitoring
-- Language translation
-- Offline video caching
-- Performance analytics
-- Voice-based teacher commands
-
----
-
-
-## 🏗️ 5. Technical Methodology (Conceptual Flow)
-Gate Camera → Attendance AI → Database
+Student Face → Camera → AI Model → Database
 ↓
-Supernode Dashboard
-↓
-Classroom Nodes (Streaming + Monitoring)
+Dashboard View
 ↓
 Parent Notification System
 
 
 
-### Core Technologies
+---
+
+## 🧱 6. Technology Design (Conceptual)
+
+### AI & Computer Vision
 - Face Recognition
-- Computer Vision (Head Detection)
-- Video Streaming
-- Voice Recognition
-- NLP-based AI Tutor
-- Cloud / Edge Storage
-- SMS / WhatsApp Notification APIs
+- Head Detection
+- Behavior Monitoring (future)
+
+### Backend
+- Centralized dashboard server
+- Streaming controller
+- Data management system
+
+### Frontend
+- Teacher/Admin dashboard
+- Parent dashboard
+- Classroom display interface
+
+### Communication Layer
+- Real-time control commands
+- Video streaming protocol
+- Notification APIs
 
 ---
 
-## 📊 6. Expected Outcomes
+## 🌐 7. Offline-First Design
 
-- Reduced teacher workload
-- Better discipline and safety
-- Improved learning consistency
-- Increased student engagement
-- Strong parent-school communication
+Since target schools may have poor internet:
 
----
-
-## 🎬 7. Demo Video
-
-Upload your demo video (example: `demo.mp4`) to this repository.
-
-### ▶️ Watch Demo
-[▶️ Click here to watch the demo video](./demo.mp4)
-
-(Optional — may not render on all GitHub views)
-
-<video src="./demo.mp4" controls width="700"></video>
+- Videos cached locally
+- Sync when internet returns
+- Local classroom operation supported
+- Minimal bandwidth usage
 
 ---
 
-## 📌 How to Add the Video
+## 🔒 8. Security Design
 
-1. Upload your video file (e.g., `demo.mp4`) to the repository root.
-2. Keep the same file name as used above.
-3. GitHub will allow users to view or download the video.
-
----
-
-## 🏁 8. Conclusion
-
-Class.ai transforms low-resource schools into AI-assisted smart institutions by enabling:
-
-- One teacher to manage the entire school
-- Automated supervision and attendance
-- Consistent AI-powered learning
-- Continuous parent engagement
+- Role-based dashboard access
+- Protected student data
+- Secure communication channels
+- Controlled parent access
 
 ---
 
-🚀 **Class.ai — Turning One Teacher into a Fully Interactive Smart School.**
+## 📈 9. Scalability Design
 
+System should support:
+
+- Multiple classrooms
+- Multiple schools (future expansion)
+- Additional AI modules
+- Upgradable hardware nodes
+
+---
+
+## 🚀 10. Future Design Enhancements
+
+- AI behavior analysis
+- Violence detection
+- Multi-language live translation
+- Advanced learning analytics
+- Voice-controlled school management
+
+---
+
+## 🏁 Conclusion
+
+The Class.ai design follows a **centralized AI-driven architecture** that enables:
+
+- One teacher to manage multiple classrooms
+- Automated attendance and monitoring
+- Scalable smart school infrastructure
+- Consistent learning experiences
+
+---
+
+🎓 **Class.ai — Smart Design for Smart Schools.**
