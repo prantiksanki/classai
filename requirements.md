@@ -9,21 +9,11 @@ This document defines the **functional, non-functional, hardware, and software r
 
 ## 🎬 Demo Video
 
-### ▶️ Class.ai Project Demo (Loop Playback)
+### ▶️ Class.ai Project Demo
 
-<iframe width="700" height="400"
-src="https://www.youtube.com/embed/MMTAWdK9gE4?autoplay=1&loop=1&playlist=MMTAWdK9gE4"
-title="Class.ai Demo Video"
-frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen>
-</iframe>
+[![Watch the Demo](https://img.youtube.com/vi/MMTAWdK9gE4/maxresdefault.jpg)](https://youtu.be/MMTAWdK9gE4)
 
----
-
-### 🔗 Direct YouTube Link
-[▶️ Watch on YouTube](https://youtu.be/MMTAWdK9gE4)
-
+🔗 [Click here to watch on YouTube](https://youtu.be/MMTAWdK9gE4)
 
 
 ---
