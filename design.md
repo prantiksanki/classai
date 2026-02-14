@@ -1,4 +1,4 @@
-# 🎓 Class.ai — Methodology
+# 🎓 Class.ai — Design
 ### AI-Powered Smart School System for Low-Resource Environments
 
 ---
