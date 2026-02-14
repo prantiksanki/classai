@@ -64,205 +64,255 @@ The system design focuses on:
  │  │ Screen+Cam   │  │ Screen+Cam   │  │ Screen+Cam   │   │
  │  └──────────────┘  └──────────────┘  └──────────────┘   │
  └──────────────────────────────────────────────────────────┘
-
----
-
-## 🧩 3. Core Components
-
-### 3.1 Supernode (Central Control)
+🧩 3. Core Components
+3.1 Supernode (Central Control)
 
 Acts as the brain of the system.
 
 Responsibilities:
-- Classroom activation
-- Live monitoring
-- Lecture management
-- Announcement broadcasting
-- Emergency alerts
-- Analytics monitoring
 
----
+Classroom activation
 
-### 3.2 Smart Attendance Module
+Live monitoring
+
+Lecture management
+
+Announcement broadcasting
+
+Emergency alerts
+
+Analytics monitoring
+
+3.2 Smart Attendance Module
 
 Design Features:
-- AI face recognition at gate
-- Automated attendance marking
-- Attendance locking after defined time
-- Late and absent tracking
+
+AI face recognition at gate
+
+Automated attendance marking
+
+Attendance locking after defined time
+
+Late and absent tracking
 
 Data Stored:
-- Student ID
-- Timestamp
-- Attendance status
 
----
+Student ID
 
-### 3.3 Classroom Node Design
+Timestamp
+
+Attendance status
+
+3.3 Classroom Node Design
 
 Each classroom contains:
 
-- Display screen / projector
-- Camera
-- Speaker
-- Internet connection
+Display screen / projector
+
+Camera
+
+Speaker
+
+Internet connection
 
 Functions:
-- Stream lectures
-- Capture live video
-- Receive commands from Supernode
-- Display announcements
 
----
+Stream lectures
 
-### 3.4 AI Streaming Module
+Capture live video
+
+Receive commands from Supernode
+
+Display announcements
+
+3.4 AI Streaming Module
 
 Workflow:
-1. Teacher uploads lecture or selects topic
-2. AI chooses appropriate content
-3. Content streamed to assigned classroom(s)
+
+Teacher uploads lecture or selects topic
+
+AI chooses appropriate content
+
+Content streamed to assigned classroom(s)
 
 Design Benefits:
-- Uniform teaching quality
-- One teacher → multiple classes
 
----
+Uniform teaching quality
 
-### 3.5 Monitoring & Analytics Module
+One teacher → multiple classes
 
-- Continuous camera feed processing
-- Student counting via head detection
-- Behavior tracking (future scope)
-- Engagement analytics
+3.5 Monitoring & Analytics Module
 
----
+Continuous camera feed processing
 
-### 3.6 AI Interaction Module
+Student counting via head detection
+
+Behavior tracking (future scope)
+
+Engagement analytics
+
+3.6 AI Interaction Module
 
 Includes:
-- Doubt detection (voice/gesture)
-- Automatic video pause
-- AI tutor support
-- Resume control via voice command
 
----
+Doubt detection (voice/gesture)
 
-### 3.7 Parent Communication Module
+Automatic video pause
+
+AI tutor support
+
+Resume control via voice command
+
+3.7 Parent Communication Module
 
 Responsible for:
-- Attendance alerts
-- Homework delivery
-- Progress updates
-- Emergency notifications
+
+Attendance alerts
+
+Homework delivery
+
+Progress updates
+
+Emergency notifications
 
 Channels:
-- SMS
-- WhatsApp
-- Parent dashboard
 
----
+SMS
 
-## 🔄 4. System Workflow Design
+WhatsApp
 
-### Daily Flow
+Parent dashboard
 
-1. Student enters school → AI attendance captured
-2. Attendance stored in database
-3. Teacher activates classrooms
-4. Lecture streaming begins
-5. AI monitors classroom activity
-6. Engagement checks every 20 minutes
-7. Homework auto-generated after class
-8. Updates sent to parents
+🔄 4. System Workflow Design
+Daily Flow
 
----
+Student enters school → AI attendance captured
 
-## 🗂️ 5. Data Flow Design
+Attendance stored in database
 
-Student Face → Camera → AI Model → Database
-↓
-Dashboard View
-↓
+Teacher activates classrooms
+
+Lecture streaming begins
+
+AI monitors classroom activity
+
+Engagement checks every 20 minutes
+
+Homework auto-generated after class
+
+Updates sent to parents
+
+🗂️ 5. Data Flow Design
+Student Face
+      ↓
+    Camera
+      ↓
+   AI Model
+      ↓
+    Database
+      ↓
+ Dashboard View
+      ↓
 Parent Notification System
 
+🧱 6. Technology Design (Conceptual)
+AI & Computer Vision
 
+Face Recognition
 
----
+Head Detection
 
-## 🧱 6. Technology Design (Conceptual)
+Behavior Monitoring (future)
 
-### AI & Computer Vision
-- Face Recognition
-- Head Detection
-- Behavior Monitoring (future)
+Backend
 
-### Backend
-- Centralized dashboard server
-- Streaming controller
-- Data management system
+Centralized dashboard server
 
-### Frontend
-- Teacher/Admin dashboard
-- Parent dashboard
-- Classroom display interface
+Streaming controller
 
-### Communication Layer
-- Real-time control commands
-- Video streaming protocol
-- Notification APIs
+Data management system
 
----
+Frontend
 
-## 🌐 7. Offline-First Design
+Teacher/Admin dashboard
+
+Parent dashboard
+
+Classroom display interface
+
+Communication Layer
+
+Real-time control commands
+
+Video streaming protocol
+
+Notification APIs
+
+🌐 7. Offline-First Design
 
 Since target schools may have poor internet:
 
-- Videos cached locally
-- Sync when internet returns
-- Local classroom operation supported
-- Minimal bandwidth usage
+Videos cached locally
 
----
+Sync when internet returns
 
-## 🔒 8. Security Design
+Local classroom operation supported
 
-- Role-based dashboard access
-- Protected student data
-- Secure communication channels
-- Controlled parent access
+Minimal bandwidth usage
 
----
+🔒 8. Security Design
 
-## 📈 9. Scalability Design
+Role-based dashboard access
+
+Protected student data
+
+Secure communication channels
+
+Controlled parent access
+
+📈 9. Scalability Design
 
 System should support:
 
-- Multiple classrooms
-- Multiple schools (future expansion)
-- Additional AI modules
-- Upgradable hardware nodes
+Multiple classrooms
+
+Multiple schools (future expansion)
+
+Additional AI modules
+
+Upgradable hardware nodes
+
+🚀 10. Future Design Enhancements
+
+AI behavior analysis
+
+Violence detection
+
+Multi-language live translation
+
+Advanced learning analytics
+
+Voice-controlled school management
+
+🏁 Conclusion
+
+The Class.ai design follows a centralized AI-driven architecture that enables:
+
+One teacher to manage multiple classrooms
+
+Automated attendance and monitoring
+
+Scalable smart school infrastructure
+
+Consistent learning experiences
+
+🎓 Class.ai — Smart Design for Smart Schools.
+
 
 ---
 
-## 🚀 10. Future Design Enhancements
+## ⭐ IMPORTANT (Best Practice)
 
-- AI behavior analysis
-- Violence detection
-- Multi-language live translation
-- Advanced learning analytics
-- Voice-controlled school management
+If you want your project to look **next-level professional**, later replace the ASCII diagram with a **Mermaid diagram** — GitHub renders them beautifully.
 
----
-
-## 🏁 Conclusion
-
-The Class.ai design follows a **centralized AI-driven architecture** that enables:
-
-- One teacher to manage multiple classrooms
-- Automated attendance and monitoring
-- Scalable smart school infrastructure
-- Consistent learning experiences
-
----
-
-🎓 **Class.ai — Smart Design for Smart Schools.**
+If you want, I can give you a **🔥 FAANG-level Architecture Diagram (Mermaid)** used in real system de
