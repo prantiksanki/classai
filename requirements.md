@@ -7,6 +7,26 @@ This document defines the **functional, non-functional, hardware, and software r
 
 ---
 
+## 🎬 Demo Video
+
+### ▶️ Class.ai Project Demo (Loop Playback)
+
+<iframe width="700" height="400"
+src="https://www.youtube.com/embed/MMTAWdK9gE4?autoplay=1&loop=1&playlist=MMTAWdK9gE4"
+title="Class.ai Demo Video"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+
+---
+
+### 🔗 Direct YouTube Link
+[▶️ Watch on YouTube](https://youtu.be/MMTAWdK9gE4)
+
+
+
+---
 ## ⚙️ 1. Functional Requirements
 
 ### 1.1 Smart Attendance System
